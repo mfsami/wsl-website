@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSL</title>
+    <style>
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .header {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      .header img {
+        max-height: 100px; /* Adjust as needed */
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #1b1b1b;
+        font-size: 1.1em;
+      }
+
+      .nav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .nav a:hover {
+        background-color: #4a4a4a;
+      }
+      .content {
+        padding: 20px;
+        text-align: center;
+      } /* Add additional styles for the team cards */
+      .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .team-box {
+        width: 30%;
+        min-width: 200px;
+        height: 300px;
+        margin-bottom: 20px;
+        perspective: 1000px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+        transition: transform 0.6s, box-shadow 0.3s; /* Smooth transition for the shadow */
+      }
+
+      .team-box:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+      }
+
+      /* Optional: add a hover effect to lift the box slightly */
+
+      .team-card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .team-card.is-flipped {
+        transform: rotateY(180deg);
+      }
+      .team-card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .team-card-face.team-card-front {
+        background-color: #ffffff;
+        color: black;
+        text-align: center;
+      }
+      .team-card-face.team-card-back {
+        background-color: #ffffff;
+        color: black;
+        transform: rotateY(180deg);
+        padding: 10px;
+
+        box-sizing: border-box;
+      }
+      .team-logo {
+        max-width: 100px;
+        margin: 20px auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="LOGO.png" alt="Logo" />
+    </div>
+    <div class="nav">
+      <a href="index.html">HOME</a>
+
+      <a href="teams.html">TEAMS</a>
+
+      <a href="rankings.html">RANKINGS</a>
+
+      <a href="stats.html">STATS</a>
+
+      <a href="schedule.html">SCHEDULE</a>
+
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="content">
+      <h2>OUR STARS</h2>
+      <p class="team-instruction">CLICK A TEAM FOR MORE INFO</p>
+      <div class="team-container">
+        <!-- Team 1 Box -->
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="ADNAN.jpg" alt="Team 1 Logo" class="team-logo" />
+              <h3>VALVERDE FC</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>ADNAN EL-TAWL</p>
+              <p>ABDULLAH ADERINTO</p>
+              <p>YOUSEF MESH</p>
+              <p>MUNEER</p>
+              <p>RAYYAN</p>
+              <p>RASHEED</p>
+              <p>BILAL RAHAL</p>
+              <p>MOSE</p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other teams -->
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="ZAYD.jpg" alt="Team 2 Logo" class="team-logo" />
+              <h3>SLUSHY FC</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>ZAYD</p>
+              <p>RAHAL</p>
+              <p>MOUALLEM</p>
+              <p>HAMZA</p>
+              <p>ADAM ZAHWEE</p>
+              <p>ADNAN EL-TAYAN</p>
+              <p>M. NOUR</p>
+              <p>SALMAN</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="SOHAIB.jpg" alt="Team 3 Logo" class="team-logo" />
+              <h3>DEMBELE FC</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>SOHAIB</p>
+              <p>HUTHAYFAH</p>
+              <p>ANSHASI</p>
+              <p>ADAM TANOUTI</p>
+              <p>REDOUANE</p>
+              <p>REHAN</p>
+              <p>MOSTAFA HEIDAR</p>
+              <p>OMAR JOMHA</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="KHALID.jpeg" alt="Team 4 Logo" class="team-logo" />
+              <h3>GOAL DIGGERS FC</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>KHALID S</p>
+              <p>JAMAL</p>
+              <p>ADNAN HANDOUS</p>
+              <p>MIT</p>
+              <p>MOSAAB</p>
+              <p>ABE SMILEY</p>
+              <p>AT</p>
+              <p>YAZAN42</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="ZAKLOGO.png" alt="Team 5 Logo" class="team-logo" />
+              <h3>DABEAST FC</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>ZAK ASSAF</p>
+              <p>AHMED ASSAF</p>
+              <p>OMAR ASSAF</p>
+              <p>AMIR B</p>
+              <p>AKT</p>
+              <p>SAMI</p>
+              <p>TAHA</p>
+              <p>MOTASIM</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="team-box"
+          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
+        >
+          <div class="team-card">
+            <div class="team-card-face team-card-front">
+              <img src="AHMED.jpg" alt="Team 6 Logo" class="team-logo" />
+              <h3>FC TAKROONI</h3>
+            </div>
+            <div class="team-card-face team-card-back">
+              <p>AHMED M</p>
+              <p>AREF</p>
+              <p>M. ELMISTRI</p>
+              <p>ADNAN SHABEN</p>
+              <p>ANES</p>
+              <p>YAQIN ISA</p>
+              <p>M. SADEK</p>
+              <p>KHALID AL-KADRI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
