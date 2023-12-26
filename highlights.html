@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSL</title>
+    <title>WSL Highlights</title>
     <style>
       body {
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif, sans-serif;
+          "Lucida Sans", Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f0f0f0;
@@ -20,7 +20,7 @@
         padding: 1em;
       }
       .header img {
-        max-height: 100px; /* Adjust as needed */
+        max-height: 100px;
       }
       .nav {
         display: flex;
@@ -28,20 +28,45 @@
         background-color: #1b1b1b;
         font-size: 1.1em;
       }
-
       .nav a {
         color: white;
         padding: 10px 15px;
         text-decoration: none;
         transition: background 0.3s ease;
       }
-
       .nav a:hover {
         background-color: #4a4a4a;
       }
       .content {
         padding: 20px;
         text-align: center;
+      }
+      .highlights-section {
+        margin-top: 20px;
+      }
+      .highlights-section h3 {
+        color: #3240da;
+        margin-bottom: 10px;
+      }
+      .video-container,
+      .photo-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .video,
+      .photo {
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      }
+      .video iframe,
+      .photo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
       }
       .footer {
         background-color: #292929;
@@ -50,48 +75,183 @@
         padding: 20px 0;
         font-size: 0.9em;
       }
-
       .footer p {
         margin: 5px 0;
       }
-      @media screen and (max-width: 768px) {
-        .nav {
-          flex-direction: column;
-          align-items: center;
-        }
 
-        .nav a {
-          display: block;
-          text-align: center;
-          padding: 8px 0;
-          width: 100%;
-        }
+
+
+
+    /* Adjust the size of the videos and photos */
+    .video iframe,
+    .photo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
       }
-    </style>
-  </head>
-  <body>
+
+      .nav a {
+        display: block;
+        text-align: center;
+        padding: 8px 0;
+        width: 100%;
+      }
+
+
+      .video-container {
+      display: flex; /* Keep items in a row */
+      overflow-x: auto; /* Allow horizontal scrolling */
+      gap: 20px; /* Space between each video wrapper */
+    }
+
+    .video-wrapper {
+      display: flex; /* Use flex layout */
+      flex-direction: column; /* Stack items (video and title) vertically */
+      align-items: center; /* Center items horizontally */
+      min-width: 300px; /* Minimum width for each video wrapper */
+    }
+
+    .video-title {
+      margin-top: 8px; /* Space between video and title */
+      font-size: 14px; /* Title font size */
+      color: #333; /* Title color */
+      text-align: center; /* Center align title */
+    }
+
+    }
+  </style>
+</head>
+<body>
     <div class="header">
       <img src="LOGO.png" alt="Logo" />
     </div>
     <div class="nav">
       <a href="index.html">HOME</a>
-
       <a href="teams.html">TEAMS</a>
-
       <a href="rankings.html">RANKINGS</a>
-
       <a href="stats.html">STATS</a>
-
       <a href="schedule.html">SCHEDULE</a>
-
       <a href="highlights.html">HIGHLIGHTS</a>
     </div>
     <div class="content">
       <h2>HIGHLIGHTS</h2>
+  
+      <!-- Video Highlights Section -->
+      <div class="highlights-section">
+        <h3>Videos</h3>
+        <div class="video-container">
+          <!-- Video 1 Wrapper -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 1</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <p class="video-title">Video Title 2</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Photo Highlights Section -->
+      <div class="highlights-section">
+        <h3>Photos</h3>
+        <div class="photo-container">
+          <!-- Example Photo -->
+          <div class="photo">
+            <img src="PHOTO.png" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTO.jpg" alt="Highlight" />
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
     <footer class="footer">
       <p>© 2024 WSL. All rights reserved.</p>
       <p>Thank you Sami El-sayed for the website, They all say in unison</p>
     </footer>
+    
+  </body>
+  </html>
   </body>
 </html>
