@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSL</title>
+    <style>
+      /* Basic Reset */
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Typography and Color Scheme */
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif, sans-serif;
+        background-color: white;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+
+      .header img {
+        max-height: 100px;
+      }
+
+      /* Navigation Bar */
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #1b1b1b;
+        font-size: 1.1em;
+      }
+
+      .nav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .nav a:hover {
+        background-color: #4a4a4a;
+      }
+
+      /* Main Content */
+      .content {
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* Section Styling */
+      .section {
+        margin-bottom: 40px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        text-align: left;
+      }
+
+      .section h2 {
+        border-bottom: 2px solid #0a4275;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #0a4275;
+      }
+
+      /* Top Highlights Section */
+      .top-highlights {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("highlight-background.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+
+      .top-highlights .highlights-text {
+        max-width: 60%;
+        padding: 20px;
+      }
+
+      /* Upcoming Matches Section */
+      .upcoming-matches ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .upcoming-matches ul li {
+        background: #e8e8e8;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Rule Book Section */
+      .rule-book p {
+        color: #555;
+      }
+
+      .welcome-section {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #3240da;
+        color: white;
+      }
+
+      .welcome-section h1 {
+        font-size: 2.5em; /* Large font for the main title */
+        margin-bottom: 20px;
+      }
+
+      .welcome-section p {
+        font-size: 1.2em; /* Slightly larger font for the description */
+        max-width: 600px;
+        margin: auto; /* Center the paragraph */
+      }
+      .large-image-section {
+        text-align: center; /* Center the image */
+        padding: 20px 0; /* Add some padding around the image */
+      }
+
+      .large-image {
+        max-width: 100%; /* Ensure the image is not wider than the viewport */
+        height: auto; /* Maintain the aspect ratio of the image */
+      }
+      .draft-deadline {
+        background-color: #1b1b1b; /* Same as the nav bar */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.1em;
+      }
+
+      #countdown {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .top-highlights,
+        .upcoming-matches,
+        .rule-book {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="LOGO.png" alt="Logo" />
+    </div>
+    <div class="nav">
+      <a href="wsl.html">HOME</a>
+      <a href="teams.html">TEAMS</a>
+      <a href="rankings.html">RANKINGS</a>
+      <a href="stats.html">STATS</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="draft-deadline">
+      <h2>DRAFT DEADLINE:</h2>
+      <div id="countdown">
+        <span id="days"></span> days, <span id="hours"></span> hours,
+        <span id="minutes"></span> minutes, <span id="seconds"></span> seconds
+      </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <h1>WELCOME TO WSL</h1>
+      <div class="large-image-section">
+        <img
+          src="NOTEXTLOGO.png"
+          alt="Large Image Description"
+          class="large-image"
+        />
+      </div>
+      <p>
+        World class is in our name, W(WORLD CLASS)SL. Even in a dire state of
+        retribution and calamity, we fight. Through the fields of outgrown
+        adversity and misfortune, we prosper. Life's journey stands as a
+        testament to the resilience of the human spirit. 01/03/2024 9:00 PM
+        Check your closet Zakariya Assaf for a surprise for the calamities
+        you've caused upon us, You will pay. Thus, in the face of life's
+        inescapable adversities, we must not merely endure but thrive. Football
+        isnt just a game, its a way of life. WE ARE WSL.
+      </p>
+    </div>
+
+    <div class="content">
+      <div class="section upcoming-matches">
+        <div class="highlights-text">
+          <h2>Top Highlights</h2>
+          <p>No highlights because everyone is trash.</p>
+        </div>
+      </div>
+      <div class="section upcoming-matches">
+        <h2>Upcoming Matches - Wednesday 12/26</h2>
+        <ul>
+          <li>Match 1: DEMBELE FC vs. FC TAKROONI - 8:00</li>
+          <li>Match 2: VALVERDE FC vs. GOAL DIGGERS - 8:30</li>
+          <li>Match 3: SLUSHY FC vs. DABEAST FC - 9:00</li>
+          <li>Match 4: GOAL DIGGERS vs. DEMBELE FC - 9:30</li>
+          <li>Match 5: DABEAST FC vs. FC TAKROONI - 10:00</li>
+          <li>Match 6: SLUSHY FC vs. VALVERDE FC - 10:30</li>
+          <!-- More matches -->
+        </ul>
+      </div>
+      <div class="section rule-book">
+        <h2>Rule Book</h2>
+        <a
+          href="https://docs.google.com/document/d/1hLwLcn40vJwZ6_B0S-dbKimCwOyFa4yMr-3gJHAJ8_8/edit"
+          target="_blank"
+          >CLICK HERE</a
+        >
+      </div>
+      <div class="section draft">
+        <h2>Draft stream</h2>
+        <a
+          href="https://www.facebook.com/events/352111967427352/"
+          target="_blank"
+          >CLICK HERE</a
+        >
+      </div>
+    </div>
+    <script>
+      function updateCountdown() {
+        const deadline = new Date("January 1, 2024 23:59:59").getTime();
+        const now = new Date().getTime();
+        const difference = deadline - now;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+
+        if (difference < 0) {
+          clearInterval(interval);
+          document.getElementById("countdown").textContent = "Deadline passed";
+        }
+      }
+
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
+</html>
