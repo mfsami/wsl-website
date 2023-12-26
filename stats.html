@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +12,7 @@
         margin: 0;
         padding: 0;
         background-color: #f0f0f0;
+        line-height: 1.6;
       }
       .header {
         background-color: #292929;
@@ -38,6 +40,18 @@
       .nav a:hover {
         background-color: #4a4a4a;
       }
+      .footer {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.9em;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
       .content {
         padding: 20px;
         text-align: center;
@@ -114,6 +128,18 @@
         border-collapse: collapse;
         margin-top: 10px;
       }
+      @media screen and (max-width: 768px) {
+        th, td {
+          padding: 8px 4px; /* Reduced padding for smaller screens */
+          font-size: 12px; /* Smaller font size for better readability */
+          word-break: break-word; /* Break words in cells if necessary */
+        }
+
+        th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
 
       th,
       td {
@@ -129,6 +155,20 @@
 
       tr:nth-child(even) {
         background-color: #f2f2f2;
+      }
+      @media screen and (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav a {
+          display: block;
+          text-align: center;
+          padding: 8px 0;
+          width: 100%;
+        }
+        
       }
     </style>
   </head>
@@ -291,300 +331,10 @@
 </div>
       </div>
     </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSL</title>
-    <style>
-      body {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-      }
-      .header {
-        background-color: #292929;
-        color: white;
-        text-align: center;
-        padding: 1em;
-      }
-      .header img {
-        max-height: 100px; /* Adjust as needed */
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        background-color: #1b1b1b;
-        font-size: 1.1em;
-      }
-
-      .nav a {
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .nav a:hover {
-        background-color: #4a4a4a;
-      }
-      .content {
-        padding: 20px;
-        text-align: center;
-      } /* Add additional styles for the team cards */
-      .team-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 20px;
-      }
-      .team-box {
-        width: 30%;
-        min-width: 200px;
-        height: 300px;
-        margin-bottom: 20px;
-        perspective: 1000px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
-        transition: transform 0.6s, box-shadow 0.3s; /* Smooth transition for the shadow */
-      }
-
-
-
-      /* Optional: add a hover effect to lift the box slightly */
-
-      .team-card {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-
-      }
-      .team-card-face {
-        display: flex;
-        align-items: center; /* Vertically center the content */
-        justify-content: top; /* Horizontally center the content */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        text-align: center; /* Center text alignment */
-      }
-
-      /* Larger font sizes for text */
-      .team-card h3,
-      .team-card h4 {
-        font-size: 1.5em; /* Adjust as needed */
-        margin-bottom: 10px;
-      }
-
-      .team-card p {
-        font-size: 1.2em; /* Adjust as needed */
-      }
-
-
-      
-      .team-logo {
-        max-width: 100px;
-        margin: 20px auto;
-        display: block;
-      }
-      .player-stats {
-        margin-top: 20px;
-        text-align: left;
-      }
-
-      .player-stats h2 {
-        margin-bottom: 10px;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-      }
-
-      th {
-        background-color: #3240da;
-        color: white;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <img src="LOGO.png" alt="Logo" />
-    </div>
-    <div class="nav">
-      <a href="index.html">HOME</a>
-
-      <a href="teams.html">TEAMS</a>
-
-      <a href="rankings.html">RANKINGS</a>
-
-      <a href="stats.html">STATS</a>
-
-      <a href="schedule.html">SCHEDULE</a>
-
-      <a href="highlights.html">HIGHLIGHTS</a>
-    </div>
-    <div class="content">
-      <div class="team-container">
-        <!-- Team 1 Box -->
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
-          <div class="team-card">
-            <div class="team-card-face team-card-front">
-              <h3>TOP SCORERS</h3>
-            </div>
-            <div class="team-card-face team-card-back">
-
-            </div>
-          </div>
-        </div>
-        <!-- Repeat for other teams -->
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
-          <div class="team-card">
-            <div class="team-card-face team-card-front">
-              <h3>TOP ASSISTERS</h3>
-            </div>
-            <div class="team-card-face team-card-back">
+    <footer class="footer">
+      <p>© 2024 WSL. All rights reserved.</p>
+      <p>Thank you Sami El-sayed for the website, They all say in unison</p>
+    </footer>
     
-   
-            </div>
-          </div>
-        </div>
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
-          <div class="team-card">
-            <div class="team-card-face team-card-front">
-              <h3>TOP GOALIES</h3>
-            </div>
-            <div class="team-card-face team-card-back">
-    
-            </div>
-          </div>
-        </div>
-          <!-- Player Stats Table Section -->
-          <div class="player-stats">
-            <h2>Player Stats</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Player</th>
-                  <th>Matches Played</th>
-                  <th>Goals</th>
-                  <th>Assists</th>
-                  <th>Red Cards</th>
-                  <th>Yellow Cards</th>
-                  <th>MOTM</th>
-                </tr>
-              </thead>
-              <tbody id="player-stats-body">
-                <!-- JavaScript will insert rows here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      
-        <!-- JavaScript for adding player data -->
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            const players = [
-              { name: "AK", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ABDULLAH ADERINTO", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ABE SMILEY", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADAM TANOUTI", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADAM ZAHWEE", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADAM HENDOUS", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN EL-TAWIL", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN SHABAN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN TAYEN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED ALI ASSAF", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED TARABAIN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED MOHAMMED", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ANSHASI", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AREF EL-TAWIL", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "BILAL RAHAL", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "HAMZA MOUSSA", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "HUTHAYFAH", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "JAMAL", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "KHALID AL KADRI", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "KHALID SHAHEEN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "M NOUR", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MIT", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOHAMMED SADIK", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOHAMMED EL MISTRI", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOSAAB JOMHA", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOSTAFA HEIDAR", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOTASSIM", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOUALLEM", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MUNEER NAZIR", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MUSTAFA ABOU GOSH", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "OMAR JOMHA", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "OMAR ASSAF", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "RAHAL", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "RASHEED JOMHA", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "RAYYAN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "REDOUANE ZERQALAH", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "REHAN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "SALMAN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "SAMI EL-SAYED", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "TAHA EL-SAYED", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YAQIN ISSA", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YAZAN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YOUSEF MESH", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ZAKARIYA ASSAF", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ZAYD ELZEIN", matches: 0, goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-
-              
-            ];
-      
-            const tableBody = document.getElementById('player-stats-body');
-            players.forEach(player => {
-              let row = `<tr>
-                <td>${player.name}</td>
-                <td>${player.matches}</td>
-                <td>${player.goals}</td>
-                <td>${player.assists}</td>
-                <td>${player.redCards}</td>
-                <td>${player.yellowCards}</td>
-                <td>${player.motm}</td>
-              </tr>`;
-              tableBody.innerHTML += row;
-            });
-          });
-        </script>
-      
-      </body>
-      </html>
-    </table>
-  </div>
-</div>
-      </div>
-    </div>
   </body>
 </html>

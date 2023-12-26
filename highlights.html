@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         background-color: #f0f0f0;
+        line-height: 1.6;
       }
       .header {
         background-color: #292929;
@@ -42,73 +43,29 @@
         padding: 20px;
         text-align: center;
       }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <img src="LOGO.png" alt="Logo" />
-    </div>
-    <div class="nav">
-      <a href="index.html">HOME</a>
-
-      <a href="teams.html">TEAMS</a>
-
-      <a href="rankings.html">RANKINGS</a>
-
-      <a href="stats.html">STATS</a>
-
-      <a href="schedule.html">SCHEDULE</a>
-
-      <a href="highlights.html">HIGHLIGHTS</a>
-    </div>
-    <div class="content">
-      <h2>HIGHLIGHTS</h2>
-    </div>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSL</title>
-    <style>
-      body {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-      }
-      .header {
+      .footer {
         background-color: #292929;
         color: white;
         text-align: center;
-        padding: 1em;
-      }
-      .header img {
-        max-height: 100px; /* Adjust as needed */
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        background-color: #1b1b1b;
-        font-size: 1.1em;
+        padding: 20px 0;
+        font-size: 0.9em;
       }
 
-      .nav a {
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        transition: background 0.3s ease;
+      .footer p {
+        margin: 5px 0;
       }
+      @media screen and (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
 
-      .nav a:hover {
-        background-color: #4a4a4a;
-      }
-      .content {
-        padding: 20px;
-        text-align: center;
+        .nav a {
+          display: block;
+          text-align: center;
+          padding: 8px 0;
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -132,5 +89,9 @@
     <div class="content">
       <h2>HIGHLIGHTS</h2>
     </div>
+    <footer class="footer">
+      <p>© 2024 WSL. All rights reserved.</p>
+      <p>Thank you Sami El-sayed for the website, They all say in unison</p>
+    </footer>
   </body>
 </html>

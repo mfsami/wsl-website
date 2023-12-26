@@ -6,28 +6,16 @@
     <title>WSL</title>
     <style>
       /* Basic Reset */
-      body,
-      h1,
-      h2,
-      h3,
-      p,
-      ul,
-      li {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Typography and Color Scheme */
       body {
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif, sans-serif;
-        background-color: white;
-        color: #333;
+          "Lucida Sans", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
         line-height: 1.6;
+        color: #333;
       }
 
-      /* Header */
       .header {
         background-color: #292929;
         color: white;
@@ -39,7 +27,6 @@
         max-height: 100px;
       }
 
-      /* Navigation Bar */
       .nav {
         display: flex;
         justify-content: center;
@@ -110,6 +97,7 @@
         margin-bottom: 10px;
         border-radius: 4px;
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        word-break: break-word; /* Ensures text breaks to prevent overflow */
       }
 
       /* Rule Book Section */
@@ -140,7 +128,7 @@
       }
 
       .large-image {
-        max-width: 100%; /* Ensure the image is not wider than the viewport */
+        max-width: 17%; /* Ensure the image is not wider than the viewport */
         height: auto; /* Maintain the aspect ratio of the image */
       }
       .draft-deadline {
@@ -154,6 +142,87 @@
       #countdown {
         font-weight: bold;
         margin-top: 10px;
+      }
+      .footer {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.9em;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Applying the animation to the image */
+      .large-image {
+        animation: rotate 20s linear infinite;
+      }
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav a {
+          display: block;
+          text-align: center;
+          padding: 8px 0;
+          width: 100%;
+        }
+
+        .top-highlights,
+        .upcoming-matches,
+        .rule-book,
+        .draft {
+          flex-direction: column;
+        }
+
+        .top-highlights .highlights-text,
+        .upcoming-matches ul,
+        .rule-book p,
+        .draft a {
+          width: 100%;
+          padding: 15px;
+        }
+
+        .large-image {
+          max-width: 50%;
+          height: auto;
+        }
+
+        .section {
+          padding: 15px;
+        }
+
+        .welcome-section p {
+          padding: 0 15px;
+        }
+
+        .footer {
+          padding: 10px 0;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .welcome-section h1 {
+          font-size: 2em;
+        }
+
+        .nav a {
+          font-size: 0.9em;
+        }
       }
 
       /* Responsive Design */
@@ -200,9 +269,7 @@
         World class is in our name, W(WORLD CLASS)SL. Even in a dire state of
         retribution and calamity, we fight. Through the fields of outgrown
         adversity and misfortune, we prosper. Life's journey stands as a
-        testament to the resilience of the human spirit. 01/03/2024 9:00 PM
-        Check your closet Zakariya Assaf for a surprise for the calamities
-        you've caused upon us, You will pay. Thus, in the face of life's
+        testament to the resilience of the human spirit. In the face of life's
         inescapable adversities, we must not merely endure but thrive. Football
         isnt just a game, its a way of life. WE ARE WSL.
       </p>
@@ -273,5 +340,9 @@
       const interval = setInterval(updateCountdown, 1000);
       updateCountdown();
     </script>
+    <footer class="footer">
+      <p>© 2024 WSL. All rights reserved.</p>
+      <p>Thank you Sami El-sayed for the website, They all say in unison</p>
+    </footer>
   </body>
 </html>
