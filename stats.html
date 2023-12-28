@@ -122,6 +122,11 @@
       .player-stats h2 {
         margin-bottom: 10px;
       }
+      .top-list {
+        margin-top: 60px; /* Adjust this value as needed */
+        /* Add other styling if necessary */
+      }
+
 
       table {
         width: 100%;
@@ -191,45 +196,56 @@
     </div>
     <div class="content">
       <div class="team-container">
-        <!-- Team 1 Box -->
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
+        <!-- TOP SCORERS Box -->
+        <div class="team-box">
           <div class="team-card">
             <div class="team-card-face team-card-front">
               <h3>TOP SCORERS</h3>
             </div>
             <div class="team-card-face team-card-back">
-
+              <div class = "top-list">
+                <p>Player Name 1 - X Goals</p>
+                <p>Player Name 2 - X Goals</p>
+                <p>Player Name 3 - X Goals</p>
+                <p>Player Name 4 - X Goals</p>
+              </div>
+              
+                
+                <!-- Add more players as needed -->
+              
             </div>
           </div>
         </div>
         <!-- Repeat for other teams -->
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
+        <div class="team-box">
           <div class="team-card">
             <div class="team-card-face team-card-front">
               <h3>TOP ASSISTERS</h3>
             </div>
             <div class="team-card-face team-card-back">
-    
-   
+              <div class = "top-list">
+                <p>Player Name 1 - X Assists</p>
+                <p>Player Name 2 - X Assists</p>
+                <p>Player Name 3 - X Assists</p>
+                <p>Player Name 4 - X Assists</p>
+                <!-- Add more players as needed -->
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="team-box"
-          onclick="this.querySelector('.team-card').classList.toggle('is-flipped')"
-        >
+        <div class="team-box">
           <div class="team-card">
             <div class="team-card-face team-card-front">
               <h3>TOP GOALIES</h3>
             </div>
             <div class="team-card-face team-card-back">
-    
+              <div class = "top-list">
+                <p>Goalie Name 1 - X Saves</p>
+                <p>Goalie Name 2 - X Saves</p>
+                <p>Goalie Name 3 - X Saves</p>
+                <p>Goalie Name 4 - X Saves</p>
+                <!-- Add more players as needed -->
+              </div>
             </div>
           </div>
         </div>
@@ -244,7 +260,7 @@
                   <th>Assists</th>
                   <th>Red Cards</th>
                   <th>Yellow Cards</th>
-                  <th>MOTM</th>
+                  
                 </tr>
               </thead>
               <tbody id="player-stats-body">
@@ -258,54 +274,54 @@
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             const players = [
-              { name: "AK", goals: 2, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ABDULLAH ADERINTO", goals: 6, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ABE SMILEY",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADAM TANOUTI",  goals: 0, assists: 0, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "ADAM ZAHWEE",  goals: 0, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADAM HENDOUS",  goals: 1, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN EL-TAWIL",  goals: 2, assists: 5, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN SHABAN",  goals: 2, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ADNAN TAYEN",  goals: 0, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED ALI ASSAF",  goals: 4, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED TARABAIN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AHMED MOHAMMED",  goals: 2, assists: 1, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "AMIR B",  goals: 3, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ANSHASI",  goals: 5, assists: 1, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "ANES",  goals: 4, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "AREF EL-TAWIL",  goals: 0, assists: 0, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "BILAL RAHAL",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "HAMZA MOUSSA",  goals: 5, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "HUTHAYFAH",  goals: 3, assists: 3, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "JAMAL",  goals: 0, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "KHALID AL KADRI",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "KHALID SHAHEEN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "M NOUR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MIT",  goals: 1, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOHAMMED SADIK",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOHAMMED EL MISTRI",  goals: 1, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOSAAB JOMHA",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOSTAFA HEIDAR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOTASSIM",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MOUALLEM",  goals: 2, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MUNEER NAZIR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "MUSTAFA ABOU GOSH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "OMAR JOMHA",  goals: 1, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "OMAR ASSAF",  goals: 5, assists: 5, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "RAHAL",  goals: 2, assists: 1, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "RASHEED JOMHA",  goals: 0, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "RAYYAN",  goals: 4, assists: 4, redCards: 0, yellowCards: 1, motm: 0 },
-              { name: "REDOUANE ZERQALAH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "REHAN",  goals: 0, assists: 3, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "SALMAN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "SAMI EL-SAYED", goals: 2, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "SOHAIB JOMHA", goals: 3, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "TAHA EL-SAYED", goals: 1, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YAQIN ISSA", goals: 5, assists: 0, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YAZAN", goals: 0, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "YOUSEF MESH", goals: 5, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ZAKARIYA ASSAF", goals: 1, assists: 1, redCards: 0, yellowCards: 0, motm: 0 },
-              { name: "ZAYD ELZEIN",goals: 2, assists: 2, redCards: 0, yellowCards: 0, motm: 0 },
+              { name: "AK", goals: 2, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "ABDULLAH ADERINTO", goals: 6, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "ABE SMILEY",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "ADAM TANOUTI",  goals: 0, assists: 0, redCards: 0, yellowCards: 1},
+              { name: "ADAM ZAHWEE",  goals: 0, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "ADAM HENDOUS",  goals: 1, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "ADNAN EL-TAWIL",  goals: 2, assists: 5, redCards: 0, yellowCards: 0},
+              { name: "ADNAN SHABAN",  goals: 2, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "ADNAN TAYEN",  goals: 0, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "AHMED ALI ASSAF",  goals: 4, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "AHMED TARABAIN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "AHMED MOHAMMED",  goals: 2, assists: 1, redCards: 0, yellowCards: 1},
+              { name: "AMIR B",  goals: 3, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "ANSHASI",  goals: 5, assists: 1, redCards: 0, yellowCards: 1},
+              { name: "ANES",  goals: 4, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "AREF EL-TAWIL",  goals: 0, assists: 0, redCards: 0, yellowCards: 1},
+              { name: "BILAL RAHAL",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "HAMZA MOUSSA",  goals: 5, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "HUTHAYFAH",  goals: 3, assists: 3, redCards: 0, yellowCards: 0},
+              { name: "JAMAL",  goals: 0, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "KHALID AL KADRI",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "KHALID SHAHEEN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "M NOUR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MIT",  goals: 1, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MOHAMMED SADIK",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MOHAMMED EL MISTRI",  goals: 1, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "MOSAAB JOMHA",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MOSTAFA HEIDAR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MOTASSIM",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MOUALLEM",  goals: 2, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "MUNEER NAZIR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "MUSTAFA ABOU GOSH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "OMAR JOMHA",  goals: 1, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "OMAR ASSAF",  goals: 5, assists: 5, redCards: 0, yellowCards: 0},
+              { name: "RAHAL",  goals: 2, assists: 1, redCards: 0, yellowCards: 1},
+              { name: "RASHEED JOMHA",  goals: 0, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "RAYYAN",  goals: 4, assists: 4, redCards: 0, yellowCards: 1},
+              { name: "REDOUANE ZERQALAH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "REHAN",  goals: 0, assists: 3, redCards: 0, yellowCards: 0},
+              { name: "SALMAN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
+              { name: "SAMI EL-SAYED", goals: 2, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "SOHAIB JOMHA", goals: 3, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "TAHA EL-SAYED", goals: 1, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "YAQIN ISSA", goals: 5, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "YAZAN", goals: 0, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "YOUSEF MESH", goals: 5, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "ZAKARIYA ASSAF", goals: 1, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "ZAYD ELZEIN",goals: 2, assists: 2, redCards: 0, yellowCards: 0},
 
               
             ];
@@ -318,7 +334,6 @@
                 <td>${player.assists}</td>
                 <td>${player.redCards}</td>
                 <td>${player.yellowCards}</td>
-                <td>${player.motm}</td>
               </tr>`;
               tableBody.innerHTML += row;
             });
