@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSL</title>
+    <style>
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        line-height: 1.6;
+      }
+      .header {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      .header img {
+        max-height: 100px; /* Adjust as needed */
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #1b1b1b;
+        font-size: 1.1em;
+      }
+
+      .nav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .nav a:hover {
+        background-color: #4a4a4a;
+      }
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+      .schedule-container {
+        width: 80%;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .match {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .team-name, .match-info {
+        flex: 1; /* Allocate equal space to both the team name and match info */
+        text-align: center; /* Center-align the content */
+      }
+
+      /* Optional: If you want the team names to take less space and score to be more centered */
+      .team-name {
+        flex: 1;  /* Adjust this value if needed */
+      }
+
+      .match-info {
+        flex: 0 0 120px; /* This sets a fixed width for the score area */
+      }
+      .footer {
+        background-color: #292929;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.9em;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      .date {
+        font-size: 0.8em;
+        color: #666;
+        margin-bottom: 4px;
+      }
+      @media screen and (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav a {
+          display: block;
+          text-align: center;
+          padding: 8px 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="LOGO.png" alt="Logo" />
+    </div>
+    <div class="nav">
+      <a href="index.html">HOME</a>
+      <a href="teams.html">TEAMS</a>
+      <a href="rankings.html">RANKINGS</a>
+      <a href="stats.html">STATS</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+      <!--<a href="trades.html">TRADES</a>-->
+    </div>
+    <div class="content">
+      
+      <div class="schedule-container">
+        <div class="match">
+          <div class="team-name">DEMBELE FC</div>
+          <div class="match-info">
+            <div>
+              <span class="score">→</span>
+            </div>
+          </div>
+          <div class="team-name">FC TAKROONI</div>
+        </div>
+
+        <!-- GAME 2 -->
+      </div>
+      <div class="schedule-container">
+        <div class="match">
+          <div class="team-name">VALVERDE FC</div>
+          <div class="match-info">
+            <div>
+              <span class="score">→</span>
+            </div>
+          </div>
+          <div class="team-name">GOAL DIGGERS FC</div>
+        </div>
+
+        <!-- GAME 3 -->
+      </div>
+      <div class="schedule-container">
+        <div class="match">
+          <div class="team-name">SLUSHY FC</div>
+          <div class="match-info">
+            <div>
+              <span class="score">→</span>
+            </div>
+          </div>
+          <div class="team-name">DABEAST FC</div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <footer class="footer">
+      <p>© 2024 WSL. All rights reserved.</p>
+      <p>Thank you Sami El-sayed for the website, They all say in unison</p>
+    </footer>
+  </body>
+</html>
