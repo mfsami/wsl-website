@@ -4,128 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WSL Highlights</title>
-    <style>
-      body {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-        line-height: 1.6;
-      }
-      .header {
-        background-color: #292929;
-        color: white;
-        text-align: center;
-        padding: 1em;
-      }
-      .header img {
-        max-height: 100px;
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        background-color: #1b1b1b;
-        font-size: 1.1em;
-      }
-      .nav a {
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-      .nav a:hover {
-        background-color: #4a4a4a;
-      }
-      .content {
-        padding: 20px;
-        text-align: center;
-      }
-      .highlights-section {
-        margin-top: 20px;
-      }
-      .highlights-section h3 {
-        color: #3240da;
-        margin-bottom: 10px;
-      }
-      .video-container,
-      .photo-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-bottom: 20px;
-      }
-      .video,
-      .photo {
-        background-color: white;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-      }
-      .video iframe,
-      .photo img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 4px;
-      }
-      .footer {
-        background-color: #292929;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 0.9em;
-      }
-      .footer p {
-        margin: 5px 0;
-      }
-
-
-
-
-    /* Adjust the size of the videos and photos */
-    .video iframe,
-    .photo img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .nav a {
-        display: block;
-        text-align: center;
-        padding: 8px 0;
-        width: 100%;
-      }
-
-
-      .video-container {
-      display: flex; /* Keep items in a row */
-      overflow-x: auto; /* Allow horizontal scrolling */
-      gap: 20px; /* Space between each video wrapper */
-    }
-
-    .video-wrapper {
-      display: flex; /* Use flex layout */
-      flex-direction: column; /* Stack items (video and title) vertically */
-      align-items: center; /* Center items horizontally */
-      min-width: 300px; /* Minimum width for each video wrapper */
-    }
-
-    .video-title {
-      margin-top: 8px; /* Space between video and title */
-      font-size: 14px; /* Title font size */
-      color: #333; /* Title color */
-      text-align: center; /* Center align title */
-    }
-
-    }
-  </style>
+    <link href = "highlightsStyle.css" rel = "stylesheet">
+    <link href = "LOGO.png" rel = "icon">
 </head>
 <body>
     <div class="header">
@@ -138,97 +18,90 @@
       <a href="stats.html">STATS</a>
       <a href="schedule.html">SCHEDULE</a>
       <a href="highlights.html">HIGHLIGHTS</a>
-      <!--<a href="trades.html">TRADES</a>-->
+      <a href="trades.html">TRADES</a>
+      <a href="awards.html">AWARDS</a>
     </div>
     <div class="content">
       <h2>HIGHLIGHTS</h2>
-      <h3>THERE ARE NO VIDEOS YET, THESE ARE ONLY PLACEHOLDERS</h3>
+      
   
       <!-- Video Highlights Section -->
       <div class="highlights-section">
         <h3>Videos</h3>
         <div class="video-container">
-          <!-- Video 1 Wrapper -->
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 1</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/DABEAST.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">DABEAST COMEBACK</p>
+          </div>
+          
+          <div class="video-wrapper">
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/Anshashi.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">AT Sons Anshashi</p>
+          </div>
+
+          <div class="video-wrapper">
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/1.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+
+            <p class="video-title">Anes Trophy Winning Goal</p>
           </div>
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/2.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Just Aref</p>
           </div>
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/3.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Adnan Banger</p>
           </div>
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/4.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Shaban Hamas Bomb</p>
           </div>
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/Zayd1.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Zayd Murder</p>
           </div>
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/Zayd2.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Zayd Murder Again</p>
           </div>
+
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
+            <video controls width="350px" height="200px">
+              <source src="VIDEOS/Taha.mp4" type="video/mp4">
+              Your browser does not support the video.
+            </video>
+            <p class="video-title">Taha Rocket</p>
           </div>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
-          </div>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
-          </div>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-            <p class="video-title">Video Title 2</p>
-          </div>
+          
         </div>
       </div>
 
@@ -236,16 +109,65 @@
       <!-- Photo Highlights Section -->
       <div class="highlights-section">
         <h3>Photos</h3>
-        <div class="photo-container">
+        
           <!-- Example Photo -->
-          <div class="photo">
-            <img src="PHOTO.png" alt="Highlight" />
+          <div class = "flex"><div class="photo">
+            <img src="PHOTOS/1.jpeg" alt="Highlight" />
           </div>
           <div class="photo">
-            <img src="PHOTO.jpg" alt="Highlight" />
+            <img src="PHOTOS/2.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/3.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/4.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/5.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/6.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/7.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/8.jpg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/9.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/10.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/11.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/12.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/13.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/14.jpg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/15.jpg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/new1.jpeg" alt="Highlight" />
+          </div>
+          <div class="photo">
+            <img src="PHOTOS/new2.jpeg" alt="Highlight" />
           </div>
         </div>
+          
+        
       </div>
+
+      
       </div>
     </div>
     <footer class="footer">

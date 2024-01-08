@@ -5,207 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WSL</title>
-    <style>
-      body {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-        line-height: 1.6;
-      }
-      .header {
-        background-color: #292929;
-        color: white;
-        text-align: center;
-        padding: 1em;
-      }
-      .header img {
-        max-height: 100px; /* Adjust as needed */
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        background-color: #1b1b1b;
-        font-size: 1.1em;
-      }
-
-      .nav a {
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .nav a:hover {
-        background-color: #4a4a4a;
-      }
-      .footer {
-        background-color: #292929;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 0.9em;
-      }
-
-      .footer p {
-        margin: 5px 0;
-      }
-
-      .content {
-        padding: 20px;
-        text-align: center;
-      } /* Add additional styles for the team cards */
-      .team-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 20px;
-      }
-      .team-box {
-        width: 30%;
-        min-width: 200px;
-        height: 300px;
-        margin-bottom: 20px;
-        perspective: 1000px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
-        transition: transform 0.6s, box-shadow 0.3s; /* Smooth transition for the shadow */
-      }
-
-
-
-      /* Optional: add a hover effect to lift the box slightly */
-
-      .team-card {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-
-      }
-      .team-card-face {
-        display: flex;
-        align-items: center; /* Vertically center the content */
-        justify-content: top; /* Horizontally center the content */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        text-align: center; /* Center text alignment */
-      }
-
-      /* Larger font sizes for text */
-      .team-card h3,
-      .team-card h4 {
-        font-size: 1.5em; /* Adjust as needed */
-        margin-bottom: 10px;
-      }
-
-      .team-card p {
-        font-size: 1.2em; /* Adjust as needed */
-      }
-
-
-      
-      .team-logo {
-        max-width: 100px;
-        margin: 20px auto;
-        display: block;
-      }
-      .player-stats {
-        margin-top: 20px;
-        text-align: left;
-      }
-
-      .player-stats h2 {
-        margin-bottom: 10px;
-      }
-      .top-list {
-        margin-top: 60px; /* Adjust this value as needed */
-        /* Add other styling if necessary */
-      }
-
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-      @media screen and (max-width: 768px) {
-        th, td {
-          padding: 8px 4px; /* Reduced padding for smaller screens */
-          font-size: 12px; /* Smaller font size for better readability */
-          word-break: break-word; /* Break words in cells if necessary */
-        }
-
-        th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-        }
-      }
-
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-      }
-
-      th {
-        background-color: #3240da;
-        color: white;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-      @media screen and (max-width: 768px) {
-        .nav {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .nav a {
-          display: block;
-          text-align: center;
-          padding: 8px 0;
-          width: 100%;
-        }
-        .top-list {
-        margin-top: 60px; /* Adjust this value as needed */
-        /* Add other styling if necessary */
-        }
-        @media screen and (max-width: 768px) {
-          .team-card h3, .team-card h4 {
-            font-size: 1.2em; /* Smaller font size on smaller screens */
-          }
-
-          .team-card p {
-            font-size: 1em; /* Adjust as needed */
-          }
-
-          .team-card-face.team-card-back {
-            padding: 10px;
-          }
-
-          .top-list {
-            margin-top: 15px;
-          }
-
-          .team-logo {
-            max-width: 80px; /* Smaller logo on smaller screens */
-          }
-
-          .team-box {
-            width: 45%; /* Adjust the width for smaller screens */
-            margin-bottom: 15px;
-          }
-        }
-        
-      }
-    </style>
+    <link href = "statsStyle.css" rel = "stylesheet">
+    <link href = "LOGO.png" rel = "icon">
   </head>
   <body>
     <div class="header">
@@ -223,7 +24,8 @@
       <a href="schedule.html">SCHEDULE</a>
 
       <a href="highlights.html">HIGHLIGHTS</a>
-      <!--<a href="trades.html">TRADES</a>-->
+      <a href="trades.html">TRADES</a>
+      <a href="awards.html">AWARDS</a>
     </div>
     <div class="content">
       <div class="team-container">
@@ -235,10 +37,12 @@
             </div>
             <div class="team-card-face team-card-back">
               <div class = "top-list">
-                <p><!--Enter players --></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>ADERINTO</p>
+                <p>ANES</p>
+                <p>YAQIN ISSA</p>
+                <p>SOHAIB JOMHA</p>
+                <p>AHMED ASSAF</p>
+                
               </div>
               
                 
@@ -255,10 +59,12 @@
             </div>
             <div class="team-card-face team-card-back">
               <div class = "top-list">
-                <p><!--Enter players --></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>ADNAN ELTAWIL</p>
+                <p>SOHAIB JOMHA</p>
+                <p>MOHAMMED ELMISTRI</p>
+                <p>OMAR ASSAF</p>
+                <p>MOUALLEM</p>
+                
                 <!-- Add more players as needed -->
               </div>
             </div>
@@ -267,14 +73,16 @@
         <div class="team-box">
           <div class="team-card">
             <div class="team-card-face team-card-front">
-              <h3>TOP GOALIES</h3>
+              <h3>LEAST GA</h3>
             </div>
             <div class="team-card-face team-card-back">
               <div class = "top-list">
-                <p><!--Enter players --></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>ADAM</p>
+                <p>AREF</p>
+                <p>MUNEER/SALMAN</p>
+                <p>ADAM ZAHWEE</p>
+                <p>ZAK/KHALID K</p>
+                <p>AT/YAZAN</p>
                 <!-- Add more players as needed -->
               </div>
             </div>
@@ -306,31 +114,31 @@
           document.addEventListener('DOMContentLoaded', function() {
             const players = [
               { name: "AK", goals: 3, assists: 1, redCards: 0, yellowCards: 0},
-              { name: "ABDULLAH ADERINTO", goals: 15, assists: 3, redCards: 0, yellowCards: 1},
+              { name: "ABDULLAH ADERINTO", goals: 17, assists: 3, redCards: 0, yellowCards: 1},
               { name: "ABE SMILEY",  goals: 1, assists: 0, redCards: 0, yellowCards: 0},
               { name: "ADAM TANOUTI",  goals: 0, assists: 0, redCards: 0, yellowCards: 1},
               { name: "ADAM ZAHWEE",  goals: 0, assists: 2, redCards: 0, yellowCards: 0},
               { name: "ADNAN HENDOUS",  goals: 3, assists: 0, redCards: 0, yellowCards: 0},
               { name: "ADNAN EL-TAWIL",  goals: 4, assists: 8, redCards: 0, yellowCards: 1},
-              { name: "ADNAN SHABAN",  goals: 4, assists: 1, redCards: 0, yellowCards: 1},
+              { name: "ADNAN SHABAN",  goals: 5, assists: 1, redCards: 0, yellowCards: 1},
               { name: "ADNAN TAYEN",  goals: 0, assists: 3, redCards: 0, yellowCards: 0},
-              { name: "AHMED ALI ASSAF",  goals: 7, assists: 4, redCards: 0, yellowCards: 0},
+              { name: "AHMED ALI ASSAF",  goals: 9, assists: 4, redCards: 0, yellowCards: 0},
               { name: "AHMED TARABAIN",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
-              { name: "AHMED MOHAMMED",  goals: 6, assists: 2, redCards: 0, yellowCards: 2},
-              { name: "AMIR B",  goals: 5, assists: 2, redCards: 0, yellowCards: 0},
-              { name: "ANSHASI",  goals: 6, assists: 4, redCards: 0, yellowCards: 1},
-              { name: "ANES",  goals: 14, assists: 3, redCards: 0, yellowCards: 0},
-              { name: "AREF EL-TAWIL",  goals: 1, assists: 1, redCards: 0, yellowCards: 1},
+              { name: "AHMED MOHAMMED",  goals: 7, assists: 2, redCards: 0, yellowCards: 2},
+              { name: "AMIR B",  goals: 6, assists: 2, redCards: 0, yellowCards: 0},
+              { name: "ANSHASI",  goals: 7, assists: 4, redCards: 0, yellowCards: 1},
+              { name: "ANES",  goals: 15, assists: 3, redCards: 0, yellowCards: 0},
+              { name: "AREF EL-TAWIL",  goals: 1, assists: 3, redCards: 0, yellowCards: 1},
               { name: "BILAL RAHAL",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
-              { name: "HAMZA MOUSSA",  goals: 5, assists: 2, redCards: 0, yellowCards: 1},
-              { name: "HUTHAYFAH",  goals: 5, assists: 4, redCards: 0, yellowCards: 0},
+              { name: "HAMZA MOUSSA",  goals: 6, assists: 2, redCards: 0, yellowCards: 1},
+              { name: "HUTHAYFAH",  goals: 8, assists: 5, redCards: 0, yellowCards: 0},
               { name: "JAMAL",  goals: 3, assists: 4, redCards: 0, yellowCards: 0},
               { name: "KHALID AL KADRI",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
               { name: "KHALID SHAHEEN",  goals: 1, assists: 1, redCards: 0, yellowCards: 0},
               { name: "M NOUR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
               { name: "MIT",  goals: 1, assists: 0, redCards: 0, yellowCards: 0},
               { name: "MOHAMMED SADIK",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
-              { name: "MOHAMMED EL MISTRI",  goals: 6, assists: 7, redCards: 0, yellowCards: 0},
+              { name: "MOHAMMED EL MISTRI",  goals: 7, assists: 8, redCards: 0, yellowCards: 0},
               { name: "MOSAAB JOMHA",  goals: 0, assists: 3, redCards: 0, yellowCards: 0},
               { name: "MOSTAFA HEIDAR",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
               { name: "MOTASSIM",  goals: 0, assists: 1, redCards: 0, yellowCards: 0},
@@ -339,19 +147,19 @@
               { name: "MUSTAFA ABOU GOSH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
               { name: "OMAR JOMHA",  goals: 2, assists: 0, redCards: 0, yellowCards: 0},
               { name: "OMAR ASSAF",  goals: 6, assists: 7, redCards: 0, yellowCards: 0},
-              { name: "RAHAL",  goals: 7, assists: 3, redCards: 1, yellowCards: 3},
+              { name: "RAHAL",  goals: 7, assists: 4, redCards: 1, yellowCards: 3},
               { name: "RASHEED JOMHA",  goals: 1, assists: 3, redCards: 0, yellowCards: 0},
               { name: "RAYYAN",  goals: 5, assists: 4, redCards: 0, yellowCards: 1},
               { name: "REDOUANE ZERQALAH",  goals: 0, assists: 0, redCards: 0, yellowCards: 0},
               { name: "REYHAN",  goals: 1, assists: 3, redCards: 0, yellowCards: 0},
               { name: "SALMAN",  goals: 0, assists: 1, redCards: 0, yellowCards: 0},
               { name: "SAMI EL-SAYED", goals: 5, assists: 1, redCards: 0, yellowCards: 0},
-              { name: "SOHAIB JOMHA", goals: 9, assists: 5, redCards: 0, yellowCards: 0},
+              { name: "SOHAIB JOMHA", goals: 11, assists: 8, redCards: 0, yellowCards: 0},
               { name: "TAHA EL-SAYED", goals: 2, assists: 1, redCards: 0, yellowCards: 0},
               { name: "YAQIN ISSA", goals: 11, assists: 4, redCards: 0, yellowCards: 0},
               { name: "YAZAN", goals: 0, assists: 3, redCards: 0, yellowCards: 0},
               { name: "YOUSEF MESH", goals: 5, assists: 1, redCards: 0, yellowCards: 0},
-              { name: "ZAKARIYA ASSAF", goals: 2, assists: 1, redCards: 0, yellowCards: 0},
+              { name: "ZAKARIYA ASSAF", goals: 2, assists: 2, redCards: 0, yellowCards: 0},
               { name: "ZAYD ELZEIN",goals: 7, assists: 4, redCards: 0, yellowCards: 0},
 
               

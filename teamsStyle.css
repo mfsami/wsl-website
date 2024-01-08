@@ -1,0 +1,129 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  background-color: #292929;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.header img {
+  max-height: 100px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b1b;
+  font-size: 1.1em;
+}
+
+.nav a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #4a4a4a;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+} /* Add additional styles for the team cards */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.team-box {
+  width: 30%;
+  min-width: 200px;
+  height: 300px;
+  margin-bottom: 20px;
+  perspective: 1000px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  transition: transform 0.6s, box-shadow 0.3s; /* Smooth transition for the shadow */
+}
+
+.team-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+/* Optional: add a hover effect to lift the box slightly */
+
+.team-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.team-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.team-card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.team-card-face.team-card-front {
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+}
+.team-card-face.team-card-back {
+  background-color: #ffffff;
+  color: black;
+  transform: rotateY(180deg);
+  padding: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.team-card-face.team-card-back p {
+  margin: 10px 0; /* Reducing the margin between names */
+  line-height: 1.2; /* Adjusting line height for compact spacing */
+}
+.team-logo {
+  max-width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+.footer {
+  background-color: #292929;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    width: 100%;
+  }
+}
