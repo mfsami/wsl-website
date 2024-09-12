@@ -23,29 +23,19 @@
     </div>
     <div class="draft-deadline">
       <h2>TRADE DEADLINE:</h2>
-      <div id="countdown">
-        <span id="days"></span> days, <span id="hours"></span> hours,
-        <span id="minutes"></span> minutes, <span id="seconds"></span> seconds
-      </div>
+      <div id="countdown"><span id="days"></span> days, <span id="hours"></span> hours, <span id="minutes"></span> minutes, <span id="seconds"></span> seconds</div>
     </div>
 
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1>WELCOME TO WSL</h1>
       <div class="large-image-section">
-        <img
-          src="NOTEXTLOGO.png"
-          alt="Large Image Description"
-          class="large-image"
-        />
+        <img src="NOTEXTLOGO.png" alt="Large Image Description" class="large-image" />
       </div>
       <p>
-        World class is in our name, W(WORLD CLASS)SL. Even in a dire state of
-        retribution and calamity, we fight. Through the fields of outgrown
-        adversity and misfortune, we prosper. Life's journey stands as a
-        testament to the resilience of the human spirit. In the face of life's
-        inescapable adversities, we must not merely endure but thrive. Football
-        isnt just a game, its a way of life. WE ARE WSL.
+        World class is in our name, W(WORLD CLASS)SL. Even in a dire state of retribution and calamity, we fight. Through the fields of outgrown adversity and misfortune, we prosper. Life's journey
+        stands as a testament to the resilience of the human spirit. In the face of life's inescapable adversities, we must not merely endure but thrive. Football isnt just a game, its a way of life.
+        WE ARE WSL.
       </p>
     </div>
 
@@ -53,7 +43,7 @@
       <div class="section upcoming-matches">
         <div class="highlights-text">
           <h2>Trophy Ceremony</h2>
-          <p>No highlights because everyone is trash.</p>
+          <p>No highlights available.</p>
         </div>
       </div>
       <div class="section upcoming-matches">
@@ -68,19 +58,11 @@
       </div>
       <div class="section rule-book">
         <h2>Rule Book</h2>
-        <a
-          href="https://docs.google.com/document/d/1hLwLcn40vJwZ6_B0S-dbKimCwOyFa4yMr-3gJHAJ8_8/edit"
-          target="_blank"
-          >CLICK HERE</a
-        >
+        <a href="https://docs.google.com/document/d/1hLwLcn40vJwZ6_B0S-dbKimCwOyFa4yMr-3gJHAJ8_8/edit" target="_blank">CLICK HERE</a>
       </div>
       <div class="section draft">
         <h2>Draft stream</h2>
-        <a
-          href="https://www.facebook.com/events/352111967427352/"
-          target="_blank"
-          >CLICK HERE</a
-        >
+        <a href="https://www.facebook.com/events/352111967427352/" target="_blank">CLICK HERE</a>
       </div>
     </div>
     <script>
@@ -90,12 +72,8 @@
         const difference = deadline - now;
 
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (difference % (1000 * 60 * 60)) / (1000 * 60)
-        );
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         document.getElementById("days").textContent = days;
